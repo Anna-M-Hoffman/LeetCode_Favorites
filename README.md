@@ -7,3 +7,5 @@ This respository holds some of my favorite LeetCode examplars with commentary.
 * **Binary Search** - Binary Search (Easy)
 * **Linked List** - Linked List Cycle (Easy), Find the Duplicate Number (Medium)
   
+**Source for Solutions:**<br/>
+Singh, N. (n.d.). *Roadmap*. NeetCode. https://neetcode.io/ 
