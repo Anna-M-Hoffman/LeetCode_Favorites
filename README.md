@@ -5,7 +5,7 @@ This respository holds some of my favorite LeetCode examplars with commentary.
 * **Stack** - Valid Parentheses (Easy)
 * **Sliding Window** - Minimum Window Substring (Hard)
 * **Binary Search** - Binary Search (Easy)
-* **Linked List** - Linked List Cycle (Easy), Find the Duplicate Number (Medium)
+* **Linked List** - Linked List Cycle (Easy), Find the Duplicate Number (Medium), Merge K Sorted Linked Lists (Hard)
   
 **Source for Solutions:**<br/>
 Singh, N. (n.d.). *Roadmap*. NeetCode. https://neetcode.io/ 
