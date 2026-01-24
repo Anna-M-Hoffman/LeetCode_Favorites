@@ -28,6 +28,9 @@ class Solution:
             if not (node.val > left and node.val < right):
                 return False
             # Recursively check right and left sides of the tree
+            # node.val is the new upper bound instead of the old right
+            # because node.val < right was already checked
+            # Same goes for node.val replacing left
             return (isValid(node.left, left, node.val) and
             isValid(node.right, node.val, right))
             
