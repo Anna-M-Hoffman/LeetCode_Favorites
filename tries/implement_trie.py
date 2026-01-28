@@ -7,7 +7,7 @@
 class TrieNode:
 
     def __init__(self):
-        self.child = {} # Nodes are in the form of hashmap because each node 
+        self.children = {} # Nodes are in the form of hashmap because each node 
         # can have multiple children. A 1:Many relationship
         # Created like d = {'a': <TrieNode object>, 'b': <TrieNode object>}
         # Leaf node hashmaps are empty {}
@@ -21,25 +21,25 @@ class PrefixTree:
     def insert(self, word: str) -> None:
         curr = self.root
         for char in word:
-            if char not in curr.child: # Check whether char key exists in hashmap
-                curr.child[char] = TrieNode()
-            curr = curr.child[char] # Move to the child node for that character
+            if char not in curr.children: # Check whether char key exists in hashmap
+                curr.children[char] = TrieNode()
+            curr = curr.children[char] # Move to the child node for that character
         curr.endOfWord = True # Mark the node object endOfWord attribute as True
 
     def search(self, word: str) -> bool:
         curr = self.root
         for char in word:
-            if char not in curr.child: # Checking for character in TrieNode()
+            if char not in curr.children: # Checking for character in TrieNode()
                 return False
-            curr = curr.child[char] 
+            curr = curr.children[char] 
         return curr.endOfWord # True or false depending on prior setting when word was added
 
     def startsWith(self, prefix: str) -> bool:
         curr = self.root
         for char in prefix:
-            if char not in curr.child:
+            if char not in curr.children:
                 return False
-            curr = curr.child[char]
+            curr = curr.children[char]
         return True # endOfWord setting does not matter for prefixes
         
 
