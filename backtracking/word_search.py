@@ -24,14 +24,15 @@ class Solution:
                 (r, c) in path): # Tile already added to path
                 return False
                                                                             
-            path.add((r, c))
+            path.add((r, c)) 
 
             res = (dfs(r + 1, c, i + 1) or # Down
             dfs(r - 1, c, i + 1) or # Up
             dfs(r, c + 1, i + 1) or # Right
             dfs(r, c - 1, i + 1)) # Left
                             
-            path.remove((r, c))
+            path.remove((r, c)) # Backtracking means removing letters
+            # after all paths are explored from it so other paths can use it
 
             return res # Will return True if any recursive direction returns True
 
